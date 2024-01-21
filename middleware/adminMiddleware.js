@@ -1,8 +1,9 @@
+
 const {Admin} = require("../db/index")
 
 async function adminMiddleware(req,res,next){
-    const username = req.body.username
-    const password = req.body.password
+    const username = req.headers.username
+    const password = req.headers.password
 
     const response = await Admin.findOne({
         username,
@@ -17,5 +18,6 @@ async function adminMiddleware(req,res,next){
         })
     }
 }
+
 
 module.exports = adminMiddleware

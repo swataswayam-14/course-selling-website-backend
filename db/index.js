@@ -1,3 +1,4 @@
+
 const mongoose = require("mongoose")
 
 mongoose.connect('mongodb+srv://paplu:papludash@cluster0.iyduksp.mongodb.net/course-selling-app')
@@ -33,4 +34,5 @@ module.exports = {
     Admin,
     User,
     Course
+
 }

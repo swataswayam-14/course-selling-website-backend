@@ -1,8 +1,9 @@
+
 const {User} = require("../db/index")
 
 async function userMiddleware(req,res,next){
-    const username = req.body.username
-    const password = req.body.password
+    const username = req.headers.username
+    const password = req.headers.password
 
     const response = await User.findOne({
         username,
